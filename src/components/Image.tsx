@@ -1,16 +1,32 @@
-export const AnimatedHero = ({ src, alt, title, subtitle }: {
-    src: string;
-    alt: string;
-    title: string;
-    subtitle?: string;
+export const AnimatedHero = ({ 
+  mobileImg, 
+  desktopImg, 
+  alt, 
+  title, 
+  subtitle 
+}: {
+  mobileImg: string;
+  desktopImg: string;
+  alt: string;
+  title?: string;
+  subtitle?: string;
 }) => {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
-      {/* 背景画像 */}
+    <div className="relative w-full h-screen overflow-hidden m-0 h-0">
+      {/* スマホ・タブレット用画像 */}
       <img
-        src={src}
+        src={mobileImg}
         alt={alt}
-        className="w-full h-full object-cover object-top
+        className="block lg:hidden w-full h-full object-contain object-center
+                   animate-[zoom_20s_ease-in-out_infinite]
+                   hover:scale-100 transition-transform duration-1000"
+      />
+      
+      {/* PC用画像（4K対応） */}
+      <img
+        src={desktopImg}
+        alt={alt}
+        className="hidden lg:block w-full h-full object-contain object-top
                    animate-[zoom_20s_ease-in-out_infinite]
                    hover:scale-110 transition-transform duration-1000"
       />
