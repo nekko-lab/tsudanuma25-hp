@@ -1,9 +1,12 @@
-export const AnimatedHero = ({ 
-  mobileImg, 
-  desktopImg, 
-  alt, 
-  title, 
-  subtitle 
+import { MouseMove } from "./hooks/MouseMove";
+import { usePageAnimation } from "./hooks/PageAnimation";
+
+export const AnimatedHero = ({
+  mobileImg,
+  desktopImg,
+  alt,
+  title,
+  subtitle
 }: {
   mobileImg: string;
   desktopImg: string;
@@ -11,36 +14,45 @@ export const AnimatedHero = ({
   title?: string;
   subtitle?: string;
 }) => {
+  const delay = usePageAnimation(100);
+  const { mouseposition, handleMouseMove, handleMouseLeave } = MouseMove(60);
   return (
-    <div className="relative w-full h-screen overflow-hidden m-0 h-0">
-      {/* スマホ・タブレット用画像 */}
+    // h-screenを削除して、画像の高さに合わせる
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden m-0 p-0 bg-transparent py-8 "
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}>
       <img
         src={mobileImg}
         alt={alt}
-        className="block lg:hidden w-full h-full object-contain object-center
-                   animate-[zoom_20s_ease-in-out_infinite]
-                   hover:scale-100 transition-transform duration-1000"
+        className={`block lg:hidden max-w-full max-h-full object-cover 
+        transition-all duration-1000 ease-out ${delay ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+        style={{
+          transform: `translate(${mouseposition.x}px,${mouseposition.y})`,
+          transition: 'transform 0.3s ease-out, opacity 1s ease-out',
+        }}
       />
-      
-      {/* PC用画像（4K対応） */}
       <img
         src={desktopImg}
         alt={alt}
-        className="hidden lg:block w-full h-full object-contain object-top
-                   animate-[zoom_20s_ease-in-out_infinite]
-                   hover:scale-110 transition-transform duration-1000"
+        className={`hidden lg:block max-w-full max-h-full object-cover
+                   transition-all duration-1000 ease-out
+                   ${delay ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+        style={{
+          transform: `translate(${mouseposition.x}px, ${mouseposition.y}px)`,
+          transition: 'transform 0.3s ease-out, opacity 1s ease-out',
+        }}
       />
-     
-      <div className="absolute inset-0 bg-white/40"></div>
-     
+
       {/* タイトルテキスト */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-black z-10">
-        <h1 className="text-6xl md:text-8xl font-bold mb-8 drop-shadow-2xl
-                       animate-fade-in">
-          {title}
-        </h1>
+        {title && (
+          <h1 className="text-6xl md:text-8xl font-bold mb-8 drop-shadow-2xl
+                         animate-fade-in">
+            {title}
+          </h1>
+        )}
         {subtitle && (
-          <p className="text-2xl md:text-8xl drop-shadow-lg">
+          <p className="text-2xl md:text-4xl drop-shadow-lg">
             {subtitle}
           </p>
         )}
