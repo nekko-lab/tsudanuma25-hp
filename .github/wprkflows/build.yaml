@@ -1,0 +1,46 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - "main"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # image registryの設定
+    env:
+      REGISTRY: ghcr.io
+      IMAGE: "ghcr.io/${{ github.repository }}:${{ github.sha }}"
+    # このリポジトリに対する書き込み権限を付与
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      # チェックアウト
+      - name: Checkout
+        uses: actions/checkout@v4
+      # GitHub Container Registryへのログイン
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      # Container build and push
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./container/Dockerfile
+          push: true
+          tags: ${{ env.IMAGE }}
+      # Update k8s yaml
+      - name: chage docker image
+        uses: mikefarah/yq@master
+        with:
+          cmd: yq '.spec.template.spec.containers[0].image = env(IMAGE)' -i ${{ env.WORK_DIR }}container/manifest/sync/app.yaml
+      # Manifest commit
+      - name: commit
+        uses: stefanzweifel/git-auto-commit-action@v4
