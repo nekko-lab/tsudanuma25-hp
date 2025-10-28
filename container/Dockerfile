@@ -38,7 +38,7 @@ FROM nginx:1.29.2
 
 # Use production node environment by default.
 #ENV NODE_ENV production
-#ENV ORIGIN https://numasai2024.nekko-lab.dev
+#ENV ORIGIN https://numasai2025.nekko-lab.dev
 
 # Run the application as a non-root user.
 #USER node
@@ -50,7 +50,6 @@ FROM nginx:1.29.2
 # the built application from the build stage into the image.
 COPY --from=deps /usr/src/app/node_modules ./node_modules
 COPY --from=build /usr/src/app/dist /usr/share/nginx/html
-COPY --from=build /usr/src/app/server ./server
 
 # Expose the port that the application listens on.
 #EXPOSE 3000
