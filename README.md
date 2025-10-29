@@ -12,5 +12,17 @@ npm run dev
 ## Build server
 
 ```shell
-npm run build.client
+npm run build
+```
+
+## Build image
+
+```shell
+docker build -f container/Dockerfile -t numa2025_fire .
+```
+
+## Run container
+
+```shell
+docker run -d -p 80:8080 numa2025_fire
 ```
