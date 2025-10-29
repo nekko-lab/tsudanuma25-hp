@@ -3,6 +3,7 @@ import { ViewAbout } from './components/About'
 import { Access } from './components/Access'
 import Header from './components/Header'
 import { AnimatedHero } from './components/Image'
+import { DJLiveLink } from './components/DJlink'
 import { SNSLink } from './components/Link'
 import { Notice } from './components/Notice'
 import { TimeTable } from './components/Time'
@@ -17,7 +18,7 @@ function App() {
       <div className='m-0 p-0 space-y-32' >
         <AnimatedHero
           mobileImg="/メインイメージタテ.png"
-          desktopImg='/メインイメージヨコ.png'
+          desktopImg='/メインイメージタテ.png'
           alt="ボカロライブ"
         />
       </div>
@@ -27,6 +28,7 @@ function App() {
         <Access />
         <TimeTable />
         <Notice />
+        <DJLiveLink />
         <SNSLink />
       </div>
     </div>

@@ -15,23 +15,27 @@ export const ViewAbout = () => {
             />
 
             {/* 左右に配置するコンテナ */}
-            <div className="flex flex-col flex-row gap-16 items-center max-w-5xl">
+            <div className="flex flex-col flex-row gap-8 items-center max-w-7xl">
                 {/* 左側のコンテンツ */}
                 <div className="flex-1">
-                    <p className="text-2xl text-gray-700 leading-relaxed">
-                        ああああああああああああああああああ<br />
-                        ああああああああああああああああああ<br />
-                        ああああああああああああああああああ<br />
-                        ああああああああああああああああああ<br />
+                    <p className="text-2xl text-black-700 leading-relaxed font-bold"
+                        style={{ fontFamily: '"M PLUS Rounded 1c", sans-serif' }}>
+                        Fire!~Miku`s Origin Live 2025~ にようこそ！<br />
+                        今年はボーカロイドファンメイドLIVEと<br />
+                        DJライブを開催します。<br />
+                        LIVEでは歌と踊りの両方を楽しめる空間を目指します。<br />
+                        初音ミクや鏡音リン・レンに会いにきてください！<br />
+                        心踊る体験を！
+
                     </p>
                 </div>
 
                 {/* 右側の画像 */}
                 <div className="flex-1">
                     <img
-                        src="/250831_千葉工大_RGB.jpg"
+                        src="/メインロゴ.PNG"
                         alt="イベント画像"
-                        className="w-full h-auto rounded-2xl shadow-lg"
+                        className="w-full h-auto"
                     />
                 </div>
             </div>
