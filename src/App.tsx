@@ -1,7 +1,6 @@
 import './App.css'
 import { ViewAbout } from './components/About'
 import { Access } from './components/Access'
-import Header from './components/Header'
 import { AnimatedHero } from './components/Image'
 import { DJLiveLink } from './components/DJlink'
 import { SNSLink } from './components/Link'
@@ -12,7 +11,6 @@ function App() {
     <div style={{
       background: 'linear-gradient(135deg, #cffafe 0%, #cffafe 30%, #fef3c7 33%, #fef3c7 63%, #fce7f3 66%, #fce7f3 100%)'
     }}>
-      <Header />
 
       {/* 画像エリア */}
       <div className='m-0 p-0 space-y-32' >

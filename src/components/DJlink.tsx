@@ -12,10 +12,10 @@ export const DJLiveLink = () => {
                     href="/dj-live"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`block bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500
-            rounded-3xl p-12 shadow-2xl
-            transition-all duration-500 hover:scale-105 hover:shadow-3xl
-            ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+                    className={`block bg-gradient-to-r from-sky-600 via-blue-700 to-indigo-800
+                        rounded-3xl p-12 shadow-2xl
+                        transition-all duration-500 hover:scale-105 hover:shadow-blue-500/40
+                        ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
                 >
                     <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-white">
                         {/* 左側 */}
@@ -23,19 +23,19 @@ export const DJLiveLink = () => {
                             <div className="text-sm font-semibold mb-2 opacity-90">
                                 🎧 SAME DAY EVENT
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-cyan-100">
                                 DJ LIVE
                             </h2>
-                            <p className="text-lg opacity-90">
-                                同日開催！音楽とビートで盛り上がろう
+                            <p className="text-lg opacity-90 text-blue-100">
+                                同日開催！音と光で盛り上がろう
                             </p>
                         </div>
 
                         {/* 右側 */}
                         <div className="flex-shrink-0">
                             <div
-                                className="bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-xl
-                transition-all duration-300 hover:bg-opacity-90"
+                                className="bg-white text-blue-700 px-8 py-4 rounded-full font-bold text-xl
+                                    transition-all duration-300 hover:bg-blue-50 hover:shadow-md"
                             >
                                 詳細を見る →
                             </div>
