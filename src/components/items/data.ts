@@ -1,15 +1,15 @@
 export const Day1Schedule = [
-    { time: '14:00', title: 'ライブ', description: 'ステージ1' },
+    { time: '14:00~14:40', title: 'ライブ', description: 'ステージ1' },
     { time: '15:00~17:40', title: 'DJ time', description: '' },
-    { time: '17:40', title: '閉幕', description: '1日目終了' },
+    { time: '~18:00', title: '閉幕', description: '1日目終了' },
 ]
 
 export const Day2Schedule = [
-    { time: '11:00', title: 'ライブ', description: 'ステージ2' },
+    { time: '11:00~11:50', title: 'ライブ', description: 'ステージ2' },
     { time: '12:10~15:00', title: 'DJ time', description: '' },
-    { time: '15:00', title: 'ライブ', description: 'ステージ3' },
+    { time: '15:00~15:50', title: 'ライブ', description: 'ステージ3' },
     { time: '16:00~17:20', title: 'DJ time', description: '' },
-    { time: '17:20', title: '閉幕', description: '全公演終了' },
+    { time: '~17:30', title: '閉幕', description: '全公演終了' },
 ]
 
 export const notice = [
@@ -42,21 +42,21 @@ export const notice = [
 export const socialLinks = [
     {
         name: 'X (Twitter)',
-        url: 'https://twitter.com/your_account',
+        url: 'https://x.com/nekko_lab',
         icon: '𝕏',
         color: 'from-black to-gray-800',
         textColor: 'text-white',
     },
     {
         name: 'Instagram',
-        url: 'https://instagram.com/your_account',
+        url: 'https://www.instagram.com/mikus.origin.39/',
         icon: '📷',
         color: 'from-pink-500 to-purple-600',
         textColor: 'text-white',
     },
     {
         name: 'YouTube',
-        url: 'https://youtube.com/@your_channel',
+        url: 'https://www.youtube.com/@mikusorigin6879',
         icon: '▶️',
         color: 'from-red-600 to-red-700',
         textColor: 'text-white',
