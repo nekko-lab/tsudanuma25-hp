@@ -1,13 +1,13 @@
 export const Day1Schedule = [
-    { time: '14:00~14:40', title: 'ライブ', description: 'ステージ1' },
+    { time: '14:00~14:45', title: 'ライブ', description: 'ステージ1' },
     { time: '15:00~17:40', title: 'DJ time', description: '' },
     { time: '~18:00', title: '閉幕', description: '1日目終了' },
 ]
 
 export const Day2Schedule = [
-    { time: '11:00~11:50', title: 'ライブ', description: 'ステージ2' },
-    { time: '12:10~15:00', title: 'DJ time', description: '' },
-    { time: '15:00~15:50', title: 'ライブ', description: 'ステージ3' },
+    { time: '11:00~11:45', title: 'ライブ', description: 'ステージ2' },
+    { time: '12:10~14:50', title: 'DJ time', description: '' },
+    { time: '15:00~15:45', title: 'ライブ', description: 'ステージ3' },
     { time: '16:00~17:20', title: 'DJ time', description: '' },
     { time: '~17:30', title: '閉幕', description: '全公演終了' },
 ]
