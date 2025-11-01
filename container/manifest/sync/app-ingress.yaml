@@ -20,6 +20,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: cyber_root_music-svc
+            name: cyberrootmusic-svc
             port:
               number: 80

@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cyber_root_music
+  name: cyberrootmusic
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: cyber_root_music
+      app: cyberrootmusic
   template:
     metadata:
       labels:
-        app: cyber_root_music
+        app: cyberrootmusic
     spec:
       containers:
-        - name: cyber_root_music
-          image: "ghcr.io/nekko-lab/cyber_root_music-app:SHA"
+        - name: cyberrootmusic
+          image: "ghcr.io/nekko-lab/cyberrootmusic-vol2:SHA"
           resources:
             limits:
               memory: "2048Mi"
