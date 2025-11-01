@@ -1,0 +1,25 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cyber_root_music
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cyber_root_music
+  template:
+    metadata:
+      labels:
+        app: cyber_root_music
+    spec:
+      containers:
+        - name: cyber_root_music
+          image: "ghcr.io/nekko-lab/cyber_root_music-app:SHA"
+          resources:
+            limits:
+              memory: "2048Mi"
+              cpu: "1"
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
