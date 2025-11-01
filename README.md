@@ -94,6 +94,6 @@ Kubernetesクラスタに自動デプロイ
 ローリングアップデートでPodを更新 (レプリカ数: 3)
 3. サービス公開
 fire-svc がPodを公開
-Ingress が numasai25.nekko-lab.dev でトラフィックをルーティング
+Ingress が numasai2025.nekko-lab.dev でトラフィックをルーティング
 Cloudflare Tunnel を使用して外部公開
 このCI/CDパイプラインは、コードの変更から本番環境へのデプロイまでを完全に自動化し、GitOpsの原則に従ってインフラの状態をGitで管理しています。
