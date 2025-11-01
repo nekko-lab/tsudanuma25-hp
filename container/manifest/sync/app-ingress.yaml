@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: cloudflare-tunnel
   rules:
-  - host: "numasai25.nekko-lab.dev"
+  - host: "numasai2025.nekko-lab.dev"
     http:
       paths:
       - path: /
