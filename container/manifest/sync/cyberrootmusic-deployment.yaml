@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: cyberrootmusic
-          image: "ghcr.io/nekko-lab/cyberrootmusic-vol2:5b18c0bf997028c4e5d3b9e741d6c9d6ab85b9ce"
+          image: "ghcr.io/nekko-lab/cyberrootmusic-vol2:29403d5e48ffad6afd77ecb6fadc14214a926cc7"
           resources:
             limits:
               memory: "2048Mi"
