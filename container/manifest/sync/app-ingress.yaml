@@ -1,0 +1,25 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: numasai25-ingress
+spec:
+  ingressClassName: cloudflare-tunnel
+  rules:
+  - host: "numasai25.nekko-lab.dev"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: fire-svc
+            port:
+              number: 80
+      - path: /dj-live
+        pathType: Prefix
+        backend:
+          service:
+            name: cyber_root_music-svc
+            port:
+              number: 80
