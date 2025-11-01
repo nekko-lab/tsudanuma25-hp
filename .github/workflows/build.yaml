@@ -38,10 +38,10 @@ jobs:
           push: true
           tags: ${{ env.IMAGE }}
       # Update k8s yaml
-      - name: chage docker image
+      - name: Change docker image
         uses: mikefarah/yq@master
         with:
           cmd: yq '.spec.template.spec.containers[0].image = env(IMAGE)' -i ${{ env.WORK_DIR }}container/manifest/sync/app.yaml
       # Manifest commit
-      - name: commit
+      - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v4
