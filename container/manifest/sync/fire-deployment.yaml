@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: fire
-          image: "ghcr.io/nekko-lab/tsudanuma25-hp:1b080358023e36b43b58eeee36f9f1123ad3c640"
+          image: "ghcr.io/nekko-lab/tsudanuma25-hp:b9f14eb7366fd63d5b3c133bfab3b0dafaf3d180"
           resources:
             limits:
               memory: "2048Mi"
