@@ -13,6 +13,7 @@ jobs:
     env:
       REGISTRY: ghcr.io
       IMAGE: "ghcr.io/${{ github.repository }}:${{ github.sha }}"
+      WORK_DIR: ""
     # このリポジトリに対する書き込み権限を付与
     permissions:
       contents: write
