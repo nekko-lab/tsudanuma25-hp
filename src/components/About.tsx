@@ -20,13 +20,12 @@ export const ViewAbout = () => {
                 <div className="flex-1">
                     <p className="text-2xl text-black-700 leading-relaxed font-bold"
                         style={{ fontFamily: '"M PLUS Rounded 1c", sans-serif' }}>
-                        Fire!~Miku`s Origin Live 2025~ にようこそ！<br />
+                        Fire!〜Miku`s Origin Live 2025〜 にようこそ！<br />
                         今年はボーカロイドファンメイドLIVEと<br />
                         DJライブを開催します。<br />
                         LIVEでは歌と踊りの両方を楽しめる空間を目指します。<br />
                         初音ミクや鏡音リン・レンに会いにきてください！<br />
                         心踊る体験を！
-
                     </p>
                 </div>
 
