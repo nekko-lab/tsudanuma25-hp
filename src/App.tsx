@@ -15,8 +15,8 @@ function App() {
       {/* 画像エリア */}
       <div className='m-0 p-0 space-y-32' >
         <AnimatedHero
-          mobileImg="/メインイメージタテ.png"
-          desktopImg='/メインイメージタテ.png'
+          mobileImg="/251103_千葉工大_RGB_背景全て無し.png"
+          desktopImg='/251103_千葉工大_RGB_背景全て無し.png'
           alt="ボカロライブ"
         />
       </div>
