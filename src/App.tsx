@@ -6,6 +6,7 @@ import { DJLiveLink } from './components/DJlink'
 import { SNSLink } from './components/Link'
 import { Notice } from './components/Notice'
 import { TimeTable } from './components/Time'
+import { Footer } from './components/Footer'
 function App() {
   return (
     <div style={{
@@ -29,6 +30,7 @@ function App() {
         <DJLiveLink />
         <SNSLink />
       </div>
+      <Footer />
     </div>
   )
 }

@@ -1,0 +1,25 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fire
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fire
+  template:
+    metadata:
+      labels:
+        app: fire
+    spec:
+      containers:
+        - name: fire
+          image: "ghcr.io/nekko-lab/tsudanuma25-hp:SHA"
+          resources:
+            limits:
+              memory: "2048Mi"
+              cpu: "1"
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
