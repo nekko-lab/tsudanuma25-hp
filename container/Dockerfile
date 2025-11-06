@@ -36,21 +36,11 @@ RUN npm run build
 #FROM base AS final
 FROM nginx:1.29.2
 
-# Use production node environment by default.
-#ENV NODE_ENV production
-#ENV ORIGIN https://numasai2025.nekko-lab.dev
+# Remove default nginx configs
+RUN rm -rf /etc/nginx/conf.d/*
 
-# Run the application AS a non-root user.
-#USER node
-
-# Copy package.json so that package manager commands can be used.
-#COPY package.json .
+# Copy NGINX config
+COPY nginx/conf.d/*.conf /etc/nginx/conf.d/
 
 # Copy the built application from the build stage into the image.
 COPY --from=build /usr/src/app/dist /usr/share/nginx/html
-
-# Expose the port that the application listens on.
-#EXPOSE 3000
-
-# Run the application.
-#CMD yarn serve
