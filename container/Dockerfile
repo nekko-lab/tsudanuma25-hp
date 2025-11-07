@@ -40,7 +40,7 @@ FROM nginx:1.29.2
 RUN rm -rf /etc/nginx/conf.d/*
 
 # Copy NGINX config
-COPY nginx/conf.d/*.conf /etc/nginx/conf.d/
+COPY container/nginx/conf.d/*.conf /etc/nginx/conf.d/
 
 # Copy the built application from the build stage into the image.
 COPY --from=build /usr/src/app/dist /usr/share/nginx/html
