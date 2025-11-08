@@ -34,7 +34,7 @@ spec:
           - name: nginx-logs
             mountPath: /var/log/nginx          
         - name: nginx-exporter
-          image: "nginx/nginx-prometheus-exporter:1.2.0"
+          image: "nginx/nginx-prometheus-exporter:1.5.1"
           args:
             - -nginx.log-path=/var/log/nginx/access.log
           ports:
