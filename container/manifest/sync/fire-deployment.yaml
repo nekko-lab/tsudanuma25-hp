@@ -22,7 +22,7 @@ spec:
           emptyDir: {}
       containers:
         - name: fire
-          image: "ghcr.io/nekko-lab/tsudanuma25-hp:e5e65f4d40bf74ff13b2a100ea16dfc9d87a38a5"
+          image: "ghcr.io/nekko-lab/tsudanuma25-hp:8f80dd84df0bf39e93ca7e3c958a7742a21de995"
           resources:
             limits:
               memory: "2048Mi"
@@ -38,8 +38,8 @@ spec:
           args:
             - -nginx.scrape-uri=http://localhost:80/metrics
           ports:
-          - containerPort: 9113
-            name: metrics
+            - containerPort: 9113
+              name: metrics
           resources:
             requests:
               cpu: "50m"
