@@ -18,11 +18,11 @@ spec:
         prometheus.io/path: "/metrics"
     spec:
       volumes:
-      - name: nginx-logs
-        emptyDir: {}
+        - name: nginx-logs
+          emptyDir: {}
       containers:
         - name: fire
-          image: "ghcr.io/nekko-lab/tsudanuma25-hp:6d1d1d31450de4b5c1a705d0174b418ea6f3c90e"
+          image: "ghcr.io/nekko-lab/tsudanuma25-hp:6f0049f4fa0bd7d0cdb1a58368c458249ed831f1"
           resources:
             limits:
               memory: "2048Mi"
@@ -31,19 +31,19 @@ spec:
               memory: "256Mi"
               cpu: "250m"
           volumeMounts:
-          - name: nginx-logs
-            mountPath: /var/log/nginx
+            - name: nginx-logs
+              mountPath: /var/log/nginx
         - name: nginx-exporter
           image: "nginx/nginx-prometheus-exporter:1.5.1"
           args:
             - -nginx.log-path=/var/log/nginx/access.log
           ports:
-          - containerPort: 9113
-            name: metrics
+            - containerPort: 9113
+              name: metrics
           volumeMounts:
-          - name: nginx-logs
-            mountPath: /var/log/nginx
-            readOnly: true
+            - name: nginx-logs
+              mountPath: /var/log/nginx
+              readOnly: true
           resources:
             requests:
               cpu: "50m"
