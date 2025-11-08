@@ -18,11 +18,11 @@ spec:
         prometheus.io/path: "/metrics"
     spec:
       volumes:
-      - name: nginx-logs
-        emptyDir: {}
+        - name: nginx-logs
+          emptyDir: {}
       containers:
         - name: cyberrootmusic
-          image: "ghcr.io/nekko-lab/cyberrootmusic-vol2:f03605c729419723e49b591c431c47bbb4f11b23"
+          image: "ghcr.io/nekko-lab/cyberrootmusic-vol2:4670827527284b1ad9d82b6b586fef8b18caace2"
           resources:
             limits:
               memory: "2048Mi"
@@ -31,8 +31,8 @@ spec:
               memory: "256Mi"
               cpu: "250m"
           volumeMounts:
-          - name: nginx-logs
-            mountPath: /var/log/nginx          
+            - name: nginx-logs
+              mountPath: /var/log/nginx
         - name: nginx-exporter
           image: "nginx/nginx-prometheus-exporter:1.5.1"
           args:
