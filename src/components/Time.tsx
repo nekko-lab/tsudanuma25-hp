@@ -20,8 +20,8 @@ export const TimeTable = () => {
                 {/* Day 1 */}
                 <div
                     className={`bg-white border border-sky-100 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-1000 ease-out p-8 ${isLoaded
-                            ? "opacity-100 scale-100 translate-x-0"
-                            : "opacity-0 scale-75 -translate-x-12"
+                        ? "opacity-100 scale-100 translate-x-0"
+                        : "opacity-0 scale-75 -translate-x-12"
                         }`}
                     style={{ transitionDelay: '300ms' }}
                 >
@@ -32,8 +32,8 @@ export const TimeTable = () => {
                         <div
                             key={index}
                             className={`mb-6 pb-6 border-b border-sky-100 last:border-none last:pb-0 transition-all duration-700 ease-out ${isLoaded
-                                    ? "opacity-100 translate-y-0"
-                                    : "opacity-0 translate-y-8"
+                                ? "opacity-100 translate-y-0"
+                                : "opacity-0 translate-y-8"
                                 }`}
                             style={{ transitionDelay: `${500 + index * 100}ms` }}
                         >
@@ -60,8 +60,8 @@ export const TimeTable = () => {
                 {/* Day 2 */}
                 <div
                     className={`bg-white border border-pink-100 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-1000 ease-out p-8 ${isLoaded
-                            ? "opacity-100 scale-100 translate-x-0"
-                            : "opacity-0 scale-75 translate-x-12"
+                        ? "opacity-100 scale-100 translate-x-0"
+                        : "opacity-0 scale-75 translate-x-12"
                         }`}
                     style={{ transitionDelay: '400ms' }}
                 >
@@ -72,8 +72,8 @@ export const TimeTable = () => {
                         <div
                             key={index}
                             className={`mb-6 pb-6 border-b border-pink-100 last:border-none last:pb-0 transition-all duration-700 ease-out ${isLoaded
-                                    ? "opacity-100 translate-y-0"
-                                    : "opacity-0 translate-y-8"
+                                ? "opacity-100 translate-y-0"
+                                : "opacity-0 translate-y-8"
                                 }`}
                             style={{ transitionDelay: `${500 + index * 100}ms` }}
                         >
@@ -97,6 +97,16 @@ export const TimeTable = () => {
                         </div>
                     ))}
                 </div>
+
+
+            </div>
+
+            <div className="mx-auto max-w-2xl pt-30">
+                <img
+                    src="/広報用セトリ.png"
+                    alt="イベント画像"
+                    className="w-full h-auto rounded-xl shadow-2xl"
+                />
             </div>
         </section>
     );
