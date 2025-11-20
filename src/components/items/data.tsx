@@ -1,3 +1,5 @@
+import { FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 export const Day1Schedule = [
     { time: '14:00~14:45', title: 'ライブ', description: 'ステージ1' },
     { time: '15:00~17:40', title: 'DJ time', description: '' },
@@ -43,21 +45,21 @@ export const socialLinks = [
     {
         name: 'X (Twitter)',
         url: 'https://x.com/nekko_lab',
-        icon: '𝕏',
+        icon: <FaXTwitter />,
         color: 'from-black to-gray-800',
         textColor: 'text-white',
     },
     {
         name: 'Instagram',
         url: 'https://www.instagram.com/mikus.origin.39/',
-        icon: '📷',
+        icon: <FaInstagram />,
         color: 'from-pink-500 to-purple-600',
         textColor: 'text-white',
     },
     {
         name: 'YouTube',
         url: 'https://www.youtube.com/@mikusorigin6879',
-        icon: '▶️',
+        icon: <FaYoutube />,
         color: 'from-red-600 to-red-700',
         textColor: 'text-white',
     },

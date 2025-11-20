@@ -26,7 +26,7 @@ export const TimeTable = () => {
                     style={{ transitionDelay: '300ms' }}
                 >
                     <h3 className="text-3xl font-bold text-sky-600 mb-8 text-center tracking-wide">
-                        Day 1
+                        11/22 Day 1
                     </h3>
                     {Day1Schedule.map((item, index) => (
                         <div
@@ -66,7 +66,7 @@ export const TimeTable = () => {
                     style={{ transitionDelay: '400ms' }}
                 >
                     <h3 className="text-3xl font-bold text-pink-600 mb-8 text-center tracking-wide">
-                        Day 2
+                        11/23 Day 2
                     </h3>
                     {Day2Schedule.map((item, index) => (
                         <div

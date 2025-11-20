@@ -7,6 +7,7 @@ module.exports = {
       fontFamily: {
         'maru': ['"M PLUS Rounded 1c"', 'sans-serif'],
         'zen': ['"Zen Maru Gothic"', 'sans-serif'],
+
       }
     }
   }
