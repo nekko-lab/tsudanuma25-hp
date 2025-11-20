@@ -22,7 +22,7 @@ spec:
           emptyDir: {}
       containers:
         - name: cyberrootmusic
-          image: "ghcr.io/nekko-lab/cyberrootmusic-vol2:197aa686ed79d0d766d660dc1464626b70d9e5de"
+          image: "ghcr.io/nekko-lab/cyberrootmusic-vol2:9799f738fc9be2a4577d12b7bdd8ac9acfe63e00"
           resources:
             limits:
               memory: "2048Mi"
