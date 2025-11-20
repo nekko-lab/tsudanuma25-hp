@@ -22,7 +22,7 @@ spec:
           emptyDir: {}
       containers:
         - name: fire
-          image: "ghcr.io/nekko-lab/tsudanuma25-hp:6de7a435cc596a5237fe1044e6668d777d027452"
+          image: "ghcr.io/nekko-lab/tsudanuma25-hp:8d68bb43c9804d440af3f16ee1226d8579d7ddf7"
           resources:
             limits:
               memory: "2048Mi"
