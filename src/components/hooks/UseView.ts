@@ -19,7 +19,7 @@ export const useInView = (
                 }
             },
             {
-                threshold: 0.5, // 30%見えたら発火（デフォルト）
+                threshold: 0, //バグってたので修正
                 rootMargin: '0px', // 発火タイミングの調整
                 ...options, // カスタムオプションで上書き可能
             }
